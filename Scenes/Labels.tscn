@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font/Montserrat-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/BestTime.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+size = 17
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 43
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Labels" type="Node2D"]
+
+[node name="BestTime" type="Label" parent="."]
+margin_left = -37.9244
+margin_top = 74.6977
+margin_right = 24.0756
+margin_bottom = 96.6977
+rect_pivot_offset = Vector2( 60.3079, 26.9296 )
+custom_fonts/font = SubResource( 2 )
+text = "n"
+uppercase = true
+script = ExtResource( 2 )
+
+[node name="BestTimeLabel" type="Label" parent="."]
+margin_left = -93.4338
+margin_top = 73.943
+margin_right = -39.4338
+margin_bottom = 95.943
+rect_pivot_offset = Vector2( 113.605, 27.3886 )
+custom_fonts/font = SubResource( 2 )
+text = "best: "
+uppercase = true
+
+[node name="ElapsedTime" type="Label" parent="."]
+margin_right = 96.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 1 )
+text = "1.1"
+
+[node name="TargetsRemainingLabel" type="Label" parent="."]
+margin_left = 26.8115
+margin_top = 73.943
+margin_right = 138.811
+margin_bottom = 95.943
+rect_pivot_offset = Vector2( 113.605, 27.3886 )
+custom_fonts/font = SubResource( 2 )
+text = "remaining: "
+uppercase = true
+
+[node name="TargetsRemaining" type="Label" parent="."]
+margin_left = 142.566
+margin_top = 73.8109
+margin_right = 196.566
+margin_bottom = 95.8109
+rect_pivot_offset = Vector2( 60.3079, 26.9296 )
+custom_fonts/font = SubResource( 2 )
+text = "n"
+uppercase = true

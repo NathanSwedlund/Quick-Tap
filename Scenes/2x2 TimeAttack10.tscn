@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/TimeAttackGameMode.gd" type="Script" id=1]
+[ext_resource path="res://Images/Background.png" type="Texture" id=2]
+[ext_resource path="res://Images/TimeBorder.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/TargetFactory.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/PauseButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Labels.tscn" type="PackedScene" id=7]
+
+[node name="TimeAttack10" type="Node2D"]
+script = ExtResource( 1 )
+scoreFileLocation = "user://bestTime102x2.save"
+shouldReset = true
+numOfTargetsToCreate = 10
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 187, 333 )
+texture = ExtResource( 2 )
+
+[node name="TimeBorder" type="Sprite" parent="."]
+position = Vector2( 188.27, 115.456 )
+texture = ExtResource( 3 )
+
+[node name="TargetFactory" parent="." instance=ExtResource( 4 )]
+numOfTargetsToCreate = 50
+
+[node name="PauseButton" parent="." instance=ExtResource( 5 )]
+position = Vector2( 302.835, 13.4993 )
+
+[node name="Timer" parent="." instance=ExtResource( 6 )]
+position = Vector2( 151.289, 86.3761 )
+
+[node name="Labels" parent="." instance=ExtResource( 7 )]
+position = Vector2( 146.884, 86.0305 )
